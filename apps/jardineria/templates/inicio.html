@@ -1,0 +1,109 @@
+{% extends "./base.html" %}
+
+{% load static %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+
+    <div class="container">
+            <section class="hero align-items-stretch">
+                <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+                    <img class="hero-imagen-desarollador rounded-circle" src="static/img/icon-jardin.png" alt="foto de portada">
+                    <h1>Hola bienvenido a jardineria online!</h1>
+                    <h2>Esta pagina esta diseñada para facilitar el comercio de productos de jardineria</h2>
+                </div>
+                <div class="hero-inferior">
+                    <img class="hero-inferior-imagen img-fluid" src="static/img/iconssss.png" alt="flores de jardin">
+                </div>
+            </section>
+            <!-- Segunda seccion -->
+            <section class="sobre-mi seccion-oscura">
+                <div class="contenedor">
+                    <h2 class="seccion-titulo">Acerca de nosotros</h2>
+                    <p class="seccion-texto">Aqui podras encontrar variedad de productos de jardineria y que mejor de manera
+                        online</p>
+                </div>
+            </section>
+            <!-- Productos -->
+            <section class="productos-recientes seccion-clara d-flex flex-column">
+                <h2 class="seccion-titulo texto-negro">Productos disponibles</h2>
+                <h3 class="seccion-descripcion">Estos son algunos de los principales productos que podras encontrar en nuestra
+                    pagina</h3>
+                <div class="modaal mb-5">
+                    <!-- Button trigger modal -->
+                    <h3>Productos en Stock</h3>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Ver los mas
+                    </button>
+        
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ver mas productos!!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3>Aqui encontras mas variedades de flores, arbustos entre otras cosas!!</h3>
+                                    <p>Actualmente seguimos trabajando para entregarles la mejor informacion sobre nuestros
+                                        proximos productos, se paciente
+                                        y espera lo que se viene estara mortal!!
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="btnCerrar" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-danger">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--galeria de producto  -->
+                <div class="container text-center productos-contenedor">
+                    <div class="row">
+                        <!-- producto 1 -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="productos">
+                                <img src="static/img/macetero-final.png" alt="Macetero">
+                                <div class="overlay">
+                                    <p>Maceteros</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- producto 2 -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="productos">
+                                <img src="static/img/floresssss.png" alt="Flores">
+                                <div class="overlay">
+                                    <p>Flores</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- producto 3 -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="productos">
+                                <img src="static/img/arbustooss.png" alt="Arbusto">
+                                <div class="overlay">
+                                    <p>Arbustos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- producto 4 -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="productos">
+                                <img src="static/img/tierra-de-hojas.png" alt="Tierra de hojas">
+                                <div class="overlay">
+                                    <p>Tierra de hojas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+{% endblock %}    
