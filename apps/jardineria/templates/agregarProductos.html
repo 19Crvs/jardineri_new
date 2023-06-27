@@ -29,6 +29,16 @@
                 <input name="txtStock" id="txtStock" type="text" class="form-control">
             </div>
 
+            <div class="col-md-4">
+                <label for="cmbCategoria">Categoria:</label>
+                <select id="cmbCategoria" name="cmbCategoria" class="form-select" aria-label="Default select example">
+                    <option disabled selected>Seleccione</option>
+                    {% for c in cate %}
+                    <option value="{{c.id_categoria}}">{{c.nombre_categoria}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
             <div class="col-md-12">
                 <label for="txtDescripcion">Descripcion:</label>
                 <input name="txtDescripcion" id="txtDescripcion" type="text" class="form-control">
@@ -42,6 +52,7 @@
             </div>
         </div>
         <button class="btn btn-success mt-5 w-100">Agregar producto</button>
+        
     </form>
 </div>
 

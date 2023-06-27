@@ -5,16 +5,45 @@
 {% block body %}
 
     <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    
+    <div class="container mb-5 mt-5">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="static/img/fondo1.jpeg " class="d-block w-100" alt="..." width="200px" height="400px">
+              </div>
+              <div class="carousel-item">
+                <img src=" static/img/fondo2.jpeg" class="d-block w-100" alt="..." width="200px" height="400px">
+              </div>
+              <div class="carousel-item">
+                <img src=" static/img/fondo3.jpeg " class="d-block w-100" alt="..." width="200px" height="400px">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
 
     <div class="container">
             <section class="hero align-items-stretch">
                 <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-                    <img class="hero-imagen-desarollador rounded-circle" src="static/img/icon-jardin.png" alt="foto de portada">
+                    <img class="hero-imagen-desarollador rounded-circle" src="{% static 'img/icon-jardin.png'  %}" alt="foto de portada">
                     <h1>Hola bienvenido a jardineria online!</h1>
                     <h2>Esta pagina esta diseñada para facilitar el comercio de productos de jardineria</h2>
                 </div>
                 <div class="hero-inferior">
-                    <img class="hero-inferior-imagen img-fluid" src="static/img/iconssss.png" alt="flores de jardin">
+                    <img class="hero-inferior-imagen img-fluid" src="{% static 'img/iconssss.png' %}" alt="flores de jardin">
                 </div>
             </section>
             <!-- Segunda seccion -->

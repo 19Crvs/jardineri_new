@@ -205,3 +205,36 @@ function hacerVisibleCarrito(){
     var items = document.getElementsByClassName('contenedor-items')[0];
     items.style.width = '60%';
 }
+
+let btnCarrito = document.getElementById("btnCarrito")
+
+btnCarrito.addEventListener('click',function(){
+    productos = [
+        {
+            sku:1,
+            cantidad:10,
+            nombre:"Limon"
+        },
+        {
+            sku:2,
+            cantidad:60,
+            nombre:"Naranja"
+        },
+        {
+            sku:3,
+            cantidad:20,
+            nombre:"durazno"
+        },
+    ]
+    //localStorage.getItem("")
+    let token = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+
+    fetch('/carrito',{
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json',
+            'X-CSRFToken' :token
+        },
+        body: JSON.stringify(productos)
+    })
+})
