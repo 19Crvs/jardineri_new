@@ -1,4 +1,4 @@
-{% extends './base.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 
@@ -6,30 +6,31 @@
 <h1>Agregar productos</h1>
 
 <div class="container">
-    <form id="formAgregar" action="/agregarProductoForm" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <form id="formAgregar" action="/agregarProductoForm" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <label for="txtSku">SKU:</label>
                 <input name="txtSku" id="txtSku" type="text" class="form-control">
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-8 mb-3">
                 <label for="txtnombre">Nombre:</label>
                 <input name="txtnombre" id="txtnombre" type="text" class="form-control">
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <label for="txtprecio">Precio:</label>
                 <input name="txtprecio" id="txtprecio" type="text" class="form-control">
             </div>
 
 
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <label for="txtStock">Stock:</label>
                 <input name="txtStock" id="txtStock" type="text" class="form-control">
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <label for="cmbCategoria">Categoria:</label>
                 <select id="cmbCategoria" name="cmbCategoria" class="form-select" aria-label="Default select example">
                     <option disabled selected>Seleccione</option>
@@ -39,20 +40,17 @@
                 </select>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-12 mb-3">
                 <label for="txtDescripcion">Descripcion:</label>
                 <input name="txtDescripcion" id="txtDescripcion" type="text" class="form-control">
             </div>
 
-
-
-            <div class="col-md-12">
+            <div class="col-md-12 mb-3">
                 <label for="txtImagen">Imagen:</label>
                 <input name="txtImagen" id="txtImagen" type="file" class="form-control">
             </div>
         </div>
         <button class="btn btn-success mt-5 w-100">Agregar producto</button>
-        
     </form>
 </div>
 

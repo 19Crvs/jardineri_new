@@ -1,15 +1,20 @@
-{% extends "./base.html" %}
+{% extends 'base.html' %}
 
 {% load static %}
 
 {% block body %}
 <!--  CSS -->
-<link rel="stylesheet" href="static/css/carrito.css">
+<!-- <link rel="stylesheet" href="static/css/carrito.css"> -->
+<link rel="stylesheet" href="{% static 'css/carrito.css' %}">
 
 <header>
     <h1>Carrito De Compra</h1>
 </header>
     <!-- contenedor de los productos -->
+    <div class="container mt-5">
+        <h1>Carrito De Compra</h1>
+    </div>
+    
 <section class="container">
     <div class="contenedor-items">
         <div class="items">
@@ -27,13 +32,13 @@
         <div class="items">
             <span class="titulo_item">Maceteros</span>
             <img src="static/img/macetero-final.png" alt="" class="img_item" width="150">
-            <span class="precio-items">$9.900</span>
+            <span class="precio-items">$16.990</span>
             <button class="boton_item">Agregar al Carrito</button>
         </div>
         <div class="items">
             <span class="titulo_item">Tierra de Hoja</span>
             <img src="static/img/tierra-de-hojas.png" alt="" class="img_item" width="150">
-            <span class="precio-items">$9.990</span>
+            <span class="precio-items">$13.990</span>
             <button class="boton_item">Agregar al Carrito</button>
         </div>
     </div>
@@ -48,7 +53,7 @@
             <div class="fila">
                 <strong>Tu Total</strong>
                 <span class="carrito-precio-total">
-                    $30.000
+                    $00000
                 </span>
             </div>
             <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
